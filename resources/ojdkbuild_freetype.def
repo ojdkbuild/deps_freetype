@@ -1,0 +1,4 @@
+EXPORTS
+    FT_Init_FreeType
+    FT_New_Face
+    FT_Done_FreeType
