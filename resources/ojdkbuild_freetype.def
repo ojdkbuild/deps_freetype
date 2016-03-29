@@ -1,4 +1,17 @@
 EXPORTS
     FT_Init_FreeType
     FT_New_Face
+    FT_Done_Face
     FT_Done_FreeType
+    FT_Open_Face
+    FT_New_Memory_Face
+    FT_Activate_Size
+    FT_Set_Char_Size
+    FT_Set_Transform
+    FT_Render_Glyph
+    FT_GlyphSlot_Oblique
+    FT_GlyphSlot_Embolden
+    FT_Load_Glyph
+    FT_Get_Char_Index
+    FT_Outline_Translate
+    FT_Outline_Get_BBox

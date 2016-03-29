@@ -2,7 +2,7 @@
 # this file is based on https://github.com/staticlibs/mirror_freetype2/blob/master/CMakeLists.txt
 cmake_minimum_required ( VERSION 2.8.12 )
 project ( lookaside_freetype C )
-set ( ${PROJECT_NAME}_SOURCE_DIR ${CMAKE_CURRENT_LIST_DIR}/../../${PROJECT_NAME} )
+set ( ${PROJECT_NAME}_SOURCE_DIR ${CMAKE_CURRENT_LIST_DIR}/../../../../lookaside/freetype )
 include ( CheckIncludeFile )
 
 file ( MAKE_DIRECTORY "${PROJECT_BINARY_DIR}/include/freetype/config" )

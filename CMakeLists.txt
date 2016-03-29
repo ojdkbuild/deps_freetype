@@ -9,10 +9,12 @@ set ( ${PROJECT_NAME}_OJDKBUILD_VERSION 2.6.2.0 )
 # static library
 add_subdirectory ( ${CMAKE_CURRENT_LIST_DIR}/resources/freetype_262_cmake ${CMAKE_CURRENT_BINARY_DIR}/lookaside_freetype )
 
-# shared_library
-add_library ( ${PROJECT_NAME} SHARED ${CMAKE_CURRENT_LIST_DIR}/resources/${PROJECT_NAME}.def )
-set_target_properties ( ${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE C )
-target_link_libraries ( ${PROJECT_NAME} lookaside_freetype )
+# shared_library, name without "ojdkbuild_" prefix because
+# freetype has a special handling in jdk sources/makefiles
+add_library ( freetype SHARED ${CMAKE_CURRENT_LIST_DIR}/resources/${PROJECT_NAME}.def )
+set_target_properties ( freetype PROPERTIES LINKER_LANGUAGE C )
+target_link_libraries ( freetype lookaside_freetype )
+add_custom_target ( ${PROJECT_NAME} DEPENDS freetype )
 
 # pkg-config
 set ( ${PROJECT_NAME}_MODULE ${PROJECT_NAME} )
