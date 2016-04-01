@@ -7,7 +7,7 @@ project ( ojdkbuild_freetype C CXX )
 set ( ${PROJECT_NAME}_OJDKBUILD_VERSION 2.6.2.0 )
 
 # static library
-add_subdirectory ( ${CMAKE_CURRENT_LIST_DIR}/resources/freetype_262_cmake ${CMAKE_CURRENT_BINARY_DIR}/lookaside_freetype )
+add_subdirectory ( ${CMAKE_CURRENT_LIST_DIR}/resources/freetype_2411_cmake ${CMAKE_CURRENT_BINARY_DIR}/lookaside_freetype )
 
 # shared_library, name without "ojdkbuild_" prefix because
 # freetype has a special handling in jdk sources/makefiles
@@ -18,7 +18,8 @@ add_custom_target ( ${PROJECT_NAME} DEPENDS freetype )
 
 # pkg-config
 set ( ${PROJECT_NAME}_MODULE ${PROJECT_NAME} )
-set ( ${PROJECT_NAME}_PC_CFLAGS "-I${CMAKE_CURRENT_BINARY_DIR}/lookaside_freetype/include -I${CMAKE_CURRENT_LIST_DIR}/lookaside_freetype/include" )
+set ( ${PROJECT_NAME}_PC_CFLAGS "                             -I${CMAKE_CURRENT_BINARY_DIR}/lookaside_freetype/include" )
+set ( ${PROJECT_NAME}_PC_CFLAGS "${${PROJECT_NAME}_PC_CFLAGS} -I${CMAKE_CURRENT_LIST_DIR}/../../lookaside/freetype" )
 set ( ${PROJECT_NAME}_PC_LIBS "-L${CMAKE_LIBRARY_OUTPUT_DIRECTORY} -l${PROJECT_NAME}" )
 configure_file ( ${CMAKE_CURRENT_LIST_DIR}/../../resources/cmake/pkg-config.in 
         ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/pkgconfig/${PROJECT_NAME}.pc )
