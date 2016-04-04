@@ -19,7 +19,7 @@ add_custom_target ( ${PROJECT_NAME} DEPENDS freetype )
 # pkg-config
 set ( ${PROJECT_NAME}_MODULE ${PROJECT_NAME} )
 set ( ${PROJECT_NAME}_PC_CFLAGS "                             -I${CMAKE_CURRENT_BINARY_DIR}/lookaside_freetype/include" )
-set ( ${PROJECT_NAME}_PC_CFLAGS "${${PROJECT_NAME}_PC_CFLAGS} -I${CMAKE_CURRENT_LIST_DIR}/../../lookaside/freetype" )
+set ( ${PROJECT_NAME}_PC_CFLAGS "${${PROJECT_NAME}_PC_CFLAGS} -I${CMAKE_CURRENT_LIST_DIR}/../../lookaside/freetype/include" )
 set ( ${PROJECT_NAME}_PC_LIBS "-L${CMAKE_LIBRARY_OUTPUT_DIRECTORY} -l${PROJECT_NAME}" )
 configure_file ( ${CMAKE_CURRENT_LIST_DIR}/../../resources/cmake/pkg-config.in 
         ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/pkgconfig/${PROJECT_NAME}.pc )
