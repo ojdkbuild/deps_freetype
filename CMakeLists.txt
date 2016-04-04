@@ -4,7 +4,7 @@ cmake_minimum_required ( VERSION 2.8.12 )
 # project
 include ( ${CMAKE_CURRENT_LIST_DIR}/../../resources/cmake/ojdkbuild_common.cmake )
 project ( ojdkbuild_freetype C CXX )
-set ( ${PROJECT_NAME}_OJDKBUILD_VERSION 2.6.2.0 )
+set ( ${PROJECT_NAME}_OJDKBUILD_VERSION 2.4.11-1 )
 
 # static library
 add_subdirectory ( ${CMAKE_CURRENT_LIST_DIR}/resources/freetype_2411_cmake ${CMAKE_CURRENT_BINARY_DIR}/lookaside_freetype )
