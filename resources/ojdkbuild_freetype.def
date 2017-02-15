@@ -25,6 +25,7 @@ EXPORTS
     FT_New_Memory_Face
     FT_Open_Face
     FT_Outline_Get_BBox
+    FT_Outline_Decompose
     FT_Outline_Translate
     FT_Render_Glyph
     FT_Set_Char_Size
