@@ -30,3 +30,4 @@ EXPORTS
     FT_Render_Glyph
     FT_Set_Char_Size
     FT_Set_Transform
+    FT_Library_SetLcdFilter
