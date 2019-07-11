@@ -32,3 +32,4 @@ EXPORTS
     FT_Set_Transform
     FT_Library_SetLcdFilter
     FT_Property_Set
+    FT_MulFix
