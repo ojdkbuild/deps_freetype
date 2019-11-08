@@ -40,6 +40,7 @@ add_custom_target ( ${PROJECT_NAME} DEPENDS freetype )
 
 # pkg-config
 set ( ${PROJECT_NAME}_MODULE freetype )
+set ( ${PROJECT_NAME}_SHARED_LIB_PATH ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/${CMAKE_SHARED_LIBRARY_PREFIX}freetype${CMAKE_SHARED_LIBRARY_SUFFIX} )
 set ( ${PROJECT_NAME}_PC_CFLAGS "-I${freetype_LOOKASIDE_DIR}/include" )
 set ( ${PROJECT_NAME}_PC_LIBS "-L${CMAKE_LIBRARY_OUTPUT_DIRECTORY} -lfreetype" )
 configure_file ( ${CMAKE_CURRENT_LIST_DIR}/../../resources/cmake/pkg-config.in 
