@@ -34,3 +34,4 @@ EXPORTS
     FT_Property_Set
     FT_MulFix
     FT_Outline_Get_CBox
+    FT_Matrix_Multiply
